@@ -58,8 +58,10 @@ else ()
     set(CMAKE_CXX_FLAGS
       "-O0 -g -rdynamic -pthread -Wall -Wextra -Werror ${CMAKE_CXX_FLAGS}")
   else ()
+    #set(CMAKE_CXX_FLAGS
+    #  "-O2 -rdynamic -pthread -Wall -Wextra -Werror ${CMAKE_CXX_FLAGS}")
     set(CMAKE_CXX_FLAGS
-      "-O2 -rdynamic -pthread -Wall -Wextra -Werror ${CMAKE_CXX_FLAGS}")
+      "-O2 -rdynamic -pthread -Wall -Wextra ${CMAKE_CXX_FLAGS}")
   endif ()
 
   if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
