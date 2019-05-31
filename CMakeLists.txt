@@ -136,6 +136,14 @@ SOURCE_GROUP("Source Files\\sil\\nvme" FILES ${SRC_SIL_NVME})
 SOURCE_GROUP("Source Files\\sim" FILES ${SRC_SIM})
 SOURCE_GROUP("Source Files\\util" FILES ${SRC_UTIL})
 
+# HANS: Bison and Flex settings
+find_package(BISON)
+find_package(FLEX)
+
+BISON_TARGET(MyParser simplessd/pal/booksim/config.y simplessd/pal/booksim/y.tab.c)
+FLEX_TARGET (MyScanner simplessd/pal/booksim/config.l simplessd/pal/booksim/lex.yy.c)
+ADD_FLEX_BISON_DEPENDENCY(MyScanner MyParser)
+
 # Define executable
 add_executable(simplessd-standalone
   ${SRC_BIL}
@@ -146,5 +154,7 @@ add_executable(simplessd-standalone
   ${SRC_SIL_NVME}
   ${SRC_SIM}
   ${SRC_UTIL}
+  ${BISON_MyParser_OUTPUTS}
+  ${FLEX_MyScanner_OUTPUTS}
 )
 target_link_libraries(simplessd-standalone simplessd)
