@@ -187,7 +187,7 @@ void Engine::deallocateEvent(SimpleSSD::Event eid) {
   }
 }
 
-bool Engine::doNextEvent() {
+bool Engine::doNextEvent(uint64_t *tickDiff) {
   uint64_t tickCopy;
 
   if (forceStop) {
@@ -199,6 +199,9 @@ bool Engine::doNextEvent() {
 
     {
       std::lock_guard<std::mutex> guard(mTick);
+
+      //HANS: To run BookSim
+      *tickDiff = now.second - simTick;
 
       simTick = now.second;
       tickCopy = simTick;

@@ -61,7 +61,7 @@ class Engine : public SimpleSSD::Simulator {
   bool isScheduled(SimpleSSD::Event, uint64_t * = nullptr) override;
   void deallocateEvent(SimpleSSD::Event) override;
 
-  bool doNextEvent();
+  bool doNextEvent(uint64_t *tickDiff);
   void stopEngine();
   void printStats(std::ostream &);
   void getStat(uint64_t &);

@@ -210,8 +210,12 @@ int main(int argc, char *argv[]) {
     }
   }
 
-  while (engine.doNextEvent())
-    ;
+  // HANS: BookSim additionals
+  uint64_t tickDiff;
+
+  while (engine.doNextEvent(&tickDiff)) {
+    pInterface->RunBookSim(tickDiff);
+  }
 
   cleanup(0);
 

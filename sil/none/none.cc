@@ -99,6 +99,11 @@ void Driver::getStats(std::vector<double> &values) {
   SimpleSSD::getCPUStatValues(values);
 }
 
+// HANS: BookSim additionals
+void Driver::RunBookSim(uint64_t iter){
+  pHIL->RunBookSim(iter);
+}
+
 }  // namespace None
 
 }  // namespace SIL

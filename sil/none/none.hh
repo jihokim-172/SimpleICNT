@@ -46,6 +46,9 @@ class Driver : public BIL::DriverInterface {
 
   void initStats(std::vector<SimpleSSD::Stats> &) override;
   void getStats(std::vector<double> &) override;
+
+  // HANS: BookSim additionals
+  void RunBookSim(uint64_t iter);
 };
 
 }  // namespace None

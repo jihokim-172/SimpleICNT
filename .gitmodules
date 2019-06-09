@@ -1,3 +1,4 @@
 [submodule "simplessd"]
 	path = simplessd
-	url = git@github.com:simplessd/simplessd
+	url = ssh://143.248.41.36:/home/server/simplessd
+#	url = git@github.com:simplessd/simplessd

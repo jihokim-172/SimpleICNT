@@ -618,6 +618,11 @@ void Driver::getVendorID(uint16_t &vid, uint16_t &ssvid) {
   ssvid = 0x8086;
 }
 
+// HANS: BookSim additionals
+void Driver::RunBookSim(uint64_t iter) {
+  
+}
+
 }  // namespace NVMe
 
 }  // namespace SIL

@@ -45,6 +45,9 @@ class DriverInterface {
 
   virtual void initStats(std::vector<SimpleSSD::Stats> &) = 0;
   virtual void getStats(std::vector<double> &) = 0;
+
+  // HANS: BookSim interface
+  virtual void RunBookSim(uint64_t iter) = 0;
 };
 
 }  // namespace BIL
