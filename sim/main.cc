@@ -214,6 +214,7 @@ int main(int argc, char *argv[]) {
   uint64_t tickDiff;
 
   while (engine.doNextEvent(&tickDiff)) {
+	  printf("curtickDiff: %ld\n",tickDiff);
     pInterface->RunBookSim(tickDiff);
   }
 

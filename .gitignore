@@ -39,3 +39,8 @@ compile_flags.txt
 
 # Reports
 *.report
+
+
+# Temp
+*.swo
+*.swp
