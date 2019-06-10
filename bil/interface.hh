@@ -48,6 +48,7 @@ class DriverInterface {
 
   // HANS: BookSim interface
   virtual void RunBookSim(uint64_t iter) = 0;
+  virtual void printBookSimStats(std::ostream & out) = 0;
 };
 
 }  // namespace BIL

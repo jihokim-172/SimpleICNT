@@ -214,7 +214,6 @@ int main(int argc, char *argv[]) {
   uint64_t tickDiff;
 
   while (engine.doNextEvent(&tickDiff)) {
-	  printf("curtickDiff: %ld\n",tickDiff);
     pInterface->RunBookSim(tickDiff);
   }
 
@@ -245,6 +244,7 @@ void cleanup(int) {
 
   pIOGen->printStats(std::cout);
   engine.printStats(std::cout);
+  pInterface->printBookSimStats(std::cout);
 
   // Cleanup all here
   delete pInterface;

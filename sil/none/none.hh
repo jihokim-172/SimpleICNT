@@ -48,7 +48,8 @@ class Driver : public BIL::DriverInterface {
   void getStats(std::vector<double> &) override;
 
   // HANS: BookSim additionals
-  void RunBookSim(uint64_t iter);
+  void RunBookSim(uint64_t iter) override ;
+  void printBookSimStats(std::ostream & out) override ;
 };
 
 }  // namespace None

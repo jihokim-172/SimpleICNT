@@ -153,6 +153,7 @@ class Driver : public BIL::DriverInterface, SimpleSSD::HIL::NVMe::Interface {
 
   // HANS: BookSim additionals
   void RunBookSim(uint64_t iter) override;
+  void printBookSimStats(std::ostream & out) override;
 };
 
 }  // namespace NVMe

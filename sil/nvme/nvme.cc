@@ -622,6 +622,11 @@ void Driver::getVendorID(uint16_t &vid, uint16_t &ssvid) {
 void Driver::RunBookSim(uint64_t iter) {
   
 }
+void Driver::printBookSimStats(std::ostream &out)
+{
+}
+
+
 
 }  // namespace NVMe
 

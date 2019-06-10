@@ -103,6 +103,10 @@ void Driver::getStats(std::vector<double> &values) {
 void Driver::RunBookSim(uint64_t iter){
   pHIL->RunBookSim(iter);
 }
+void Driver::printBookSimStats(std::ostream &out)
+{
+	pHIL->printBookSimStats(std::cout);
+}
 
 }  // namespace None
 
